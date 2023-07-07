@@ -14,10 +14,10 @@ function App(props) {
     });
   };
   return (
-    <div className="App">
+    <>
       <UserInputs onAddUser={addUserHandler} />
       <UserInputsList users={users} />
-    </div>
+    </>
   );
 }
 
