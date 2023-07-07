@@ -3,6 +3,7 @@ import classes from "./UserInputs.module.css";
 import Card from "../UI/Card";
 import Button from "../UI/Button";
 import ErrorModal from "../UI/ErrorModal";
+import Wrapper from "../Helpers/Wrapper";
 export default function UserInputs(props) {
   const [userInputText, setUserInputText] = useState("");
   const [userInputAge, setUserInputAge] = useState("");
@@ -37,7 +38,7 @@ export default function UserInputs(props) {
     setError(null);
   };
   return (
-    <div>
+    <Wrapper>
       {error && (
         <ErrorModal
           title={error.title}
@@ -64,6 +65,6 @@ export default function UserInputs(props) {
           <Button type="submit">Add User</Button>
         </form>
       </Card>
-    </div>
+    </Wrapper>
   );
 }
