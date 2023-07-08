@@ -5,11 +5,16 @@ import UserInputsList from "./Components/UserInputs/UserInputsList";
 
 function App(props) {
   const [users, setUsers] = useState([]);
-  const addUserHandler = (userName, userAge) => {
+  const addUserHandler = (userName, userAge, userCollege) => {
     setUsers((prevUsers) => {
       return [
         ...prevUsers,
-        { userName: userName, userAge: userAge, id: Math.random().toString() },
+        {
+          userName: userName,
+          userAge: userAge,
+          userCollege: userCollege,
+          id: Math.random().toString(),
+        },
       ];
     });
   };

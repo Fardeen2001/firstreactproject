@@ -7,7 +7,7 @@ function UserInputsList(props) {
       <ul>
         {props.users.map((item) => (
           <li key={item.id}>
-            {item.userName}({item.userAge} Years Old)
+            {item.userName} ({item.userAge} Years Old) {item.userCollege}
           </li>
         ))}
       </ul>
